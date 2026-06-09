@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NestManager — Bookings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="bookings.css" />
+</head>
+<body>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <div class="sidebar-logo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <span class="logo-text">Nest<em>Manager</em></span>
+      </div>
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <span class="nav-section-label">Main</span>
+        <a href="../dashboard/dashboard.html" class="nav-item">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+          <span class="nav-label">Dashboard</span>
+        </a>
+        <a href="../rooms/rooms.html" class="nav-item">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+          <span class="nav-label">Rooms &amp; Beds</span>
+        </a>
+        <a href="../tenants/tenants.html" class="nav-item">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <span class="nav-label">Tenants</span>
+        </a>
+        <a href="bookings.html" class="nav-item active">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+          <span class="nav-label">Bookings</span>
+        </a>
+        <span class="nav-section-label">Finance</span>
+        <a href="../payments/payments.html" class="nav-item">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <span class="nav-label">Payments</span>
+        </a>
+        <a href="../reports/reports.html" class="nav-item">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+          <span class="nav-label">Reports</span>
+        </a>
+        <span class="nav-section-label">System</span>
+        <a href="../notifications/notifications.html" class="nav-item">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>
+          <span class="nav-label">Notifications</span>
+        </a>
+        <a href="../settings/settings.html" class="nav-item">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
+          <span class="nav-label">Settings</span>
+        </a>
+      </nav>
+    </div>
+    <div class="sidebar-user">
+      <div class="user-avatar" id="user-avatar">--</div>
+      <div class="user-info">
+        <span class="user-name" id="user-name">Loading...</span>
+        <span class="user-role" id="user-role">--</span>
+      </div>
+      <button class="logout-btn" id="logout-btn" title="Sign out" aria-label="Sign out">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ===================== MAIN ===================== -->
+  <div class="main-wrap">
+
+    <header class="topbar">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle sidebar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-title">Bookings</div>
+      <div class="topbar-right">
+        <div class="topbar-date" id="topbar-date"></div>
+        <button class="topbar-icon-btn" id="refresh-btn" title="Refresh" aria-label="Refresh bookings">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+
+      <!-- Page header -->
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Bookings</h1>
+          <p class="page-sub" id="page-sub">Manage all room bookings and allocations</p>
+        </div>
+        <button class="btn btn-primary" id="add-booking-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          New Booking
+        </button>
+      </div>
+
+      <!-- Summary strip -->
+      <div class="summary-strip">
+        <div class="summary-item">
+          <span class="summary-value" id="sum-total">--</span>
+          <span class="summary-label">Total Bookings</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-item">
+          <span class="summary-value summary-value--green" id="sum-confirmed">--</span>
+          <span class="summary-label">Confirmed</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-item">
+          <span class="summary-value summary-value--yellow" id="sum-pending">--</span>
+          <span class="summary-label">Pending</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-item">
+          <span class="summary-value summary-value--red" id="sum-cancelled">--</span>
+          <span class="summary-label">Cancelled</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-item">
+          <span class="summary-value summary-value--purple" id="sum-checkedin">--</span>
+          <span class="summary-label">Checked In</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-item">
+          <span class="summary-value summary-value--blue" id="sum-revenue">--</span>
+          <span class="summary-label">Total Revenue</span>
+        </div>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="ALL">All</button>
+          <button class="filter-btn" data-filter="CONFIRMED">Confirmed</button>
+          <button class="filter-btn" data-filter="PENDING">Pending</button>
+          <button class="filter-btn" data-filter="CHECKED_IN">Checked In</button>
+          <button class="filter-btn" data-filter="CHECKED_OUT">Checked Out</button>
+          <button class="filter-btn" data-filter="CANCELLED">Cancelled</button>
+        </div>
+        <div class="toolbar-right">
+          <input type="month" id="month-filter" class="filter-select" aria-label="Filter by month" />
+          <div class="search-wrap">
+            <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="search-input" class="search-input" placeholder="Search guest, room, ID..." aria-label="Search bookings" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bookings table -->
+      <div class="table-panel">
+        <table class="bookings-table">
+          <thead>
+            <tr>
+              <th>Booking ID</th>
+              <th>Guest</th>
+              <th>Room</th>
+              <th>Type</th>
+              <th>Check-in</th>
+              <th>Check-out</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="bookings-tbody"></tbody>
+        </table>
+
+        <!-- Empty state -->
+        <div class="empty-state hidden" id="empty-state">
+          <div class="empty-icon">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3 class="empty-title">No bookings found</h3>
+          <p class="empty-sub">Try adjusting your filters or create a new booking.</p>
+          <button class="btn btn-primary" id="empty-add-btn">New Booking</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ===================== ADD / EDIT BOOKING MODAL ===================== -->
+  <div class="modal-overlay" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-title">New Booking</h2>
+        <button class="modal-close" id="modal-close" aria-label="Close modal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="booking-form" novalidate>
+          <input type="hidden" id="booking-id" />
+
+          <!-- Guest Info -->
+          <div class="form-section-label">Guest Information</div>
+          <div class="form-grid">
+            <div class="field-group">
+              <label class="field-label" for="f-guest-name">Guest Name <span class="required">*</span></label>
+              <input type="text" id="f-guest-name" class="field-input" placeholder="Full name" required />
+              <span class="field-error" id="err-guest-name"></span>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="f-guest-phone">Phone <span class="required">*</span></label>
+              <input type="tel" id="f-guest-phone" class="field-input" placeholder="+91 XXXXX XXXXX" required />
+              <span class="field-error" id="err-guest-phone"></span>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="f-guest-email">Email</label>
+              <input type="email" id="f-guest-email" class="field-input" placeholder="email@example.com" />
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="f-guests-count">No. of Guests</label>
+              <input type="number" id="f-guests-count" class="field-input" placeholder="1" min="1" max="10" value="1" />
+            </div>
+          </div>
+
+          <!-- Room & Stay -->
+          <div class="form-section-label">Room &amp; Stay Details</div>
+          <div class="form-grid">
+            <div class="field-group">
+              <label class="field-label" for="f-room">Room <span class="required">*</span></label>
+              <select id="f-room" class="field-input field-select">
+                <option value="">-- Select Room --</option>
+              </select>
+              <span class="field-error" id="err-room"></span>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="f-booking-type">Booking Type</label>
+              <select id="f-booking-type" class="field-input field-select">
+                <option value="MONTHLY">Monthly (Long-term)</option>
+                <option value="WEEKLY">Weekly</option>
+                <option value="DAILY">Daily (Short-term)</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="f-checkin">Check-in Date <span class="required">*</span></label>
+              <input type="date" id="f-checkin" class="field-input" required />
+              <span class="field-error" id="err-checkin"></span>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="f-checkout">Check-out Date</label>
+              <input type="date" id="f-checkout" class="field-input" />
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="f-amount">Amount (₹) <span class="required">*</span></label>
+              <input type="number" id="f-amount" class="field-input" placeholder="e.g. 6000" min="0" required />
+              <span class="field-error" id="err-amount"></span>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="f-advance">Advance Paid (₹)</label>
+              <input type="number" id="f-advance" class="field-input" placeholder="e.g. 2000" min="0" />
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="f-status">Status</label>
+              <select id="f-status" class="field-input field-select">
+                <option value="CONFIRMED">Confirmed</option>
+                <option value="PENDING">Pending</option>
+                <option value="CHECKED_IN">Checked In</option>
+                <option value="CHECKED_OUT">Checked Out</option>
+                <option value="CANCELLED">Cancelled</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="f-payment-status">Payment Status</label>
+              <select id="f-payment-status" class="field-input field-select">
+                <option value="UNPAID">Unpaid</option>
+                <option value="PARTIAL">Partial</option>
+                <option value="PAID">Paid</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="f-notes">Special Requests / Notes</label>
+            <textarea id="f-notes" class="field-textarea" placeholder="Any special requests or notes..."></textarea>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="modal-cancel">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="modal-submit">
+              <span id="submit-text">Create Booking</span>
+              <span class="btn-spinner hidden" id="submit-spinner"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== BOOKING DETAIL MODAL ===================== -->
+  <div class="modal-overlay" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+    <div class="modal modal--detail">
+      <div class="modal-header">
+        <h2 class="modal-title" id="detail-title">Booking Details</h2>
+        <button class="modal-close" id="detail-close" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="detail-body"></div>
+    </div>
+  </div>
+
+  <!-- ===================== CANCEL CONFIRM MODAL ===================== -->
+  <div class="modal-overlay" id="cancel-modal" role="dialog" aria-modal="true">
+    <div class="modal modal--sm">
+      <div class="modal-header">
+        <h2 class="modal-title">Cancel Booking</h2>
+        <button class="modal-close" id="cancel-modal-close" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="confirm-msg">Are you sure you want to cancel booking <strong id="cancel-booking-id">--</strong> for <strong id="cancel-guest-name">--</strong>? This action cannot be undone.</p>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" id="cancel-no">Keep Booking</button>
+          <button class="btn btn-danger" id="cancel-yes">
+            <span id="cancel-text">Cancel Booking</span>
+            <span class="btn-spinner hidden" id="cancel-spinner"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <script src="bookings.js"></script>
+</body>
+</html>

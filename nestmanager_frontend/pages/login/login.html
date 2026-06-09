@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NestManager — Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <!-- Background grid pattern -->
+  <div class="bg-grid"></div>
+  <!-- Ambient glow blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <div class="page-wrap">
+
+    <!-- Left panel — branding -->
+    <aside class="brand-panel">
+      <div class="brand-content">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <span class="logo-text">Nest<em>Manager</em></span>
+        </div>
+
+        <div class="brand-headline">
+          <h1>Manage your<br/>property<br/><span class="accent-word">smarter.</span></h1>
+          <p class="brand-sub">PG &bull; Hostel &bull; Small Hotel — all in one place.</p>
+        </div>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feat-icon">&#9632;</span>
+            <span>Real-time room availability</span>
+          </div>
+          <div class="feature-item">
+            <span class="feat-icon">&#9632;</span>
+            <span>Automated rent reminders</span>
+          </div>
+          <div class="feature-item">
+            <span class="feat-icon">&#9632;</span>
+            <span>Tenant &amp; payment tracking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-footer">
+        &copy; 2025 NestManager. All rights reserved.
+      </div>
+    </aside>
+
+    <!-- Right panel — login form -->
+    <main class="form-panel">
+      <div class="form-card">
+
+        <div class="form-header">
+          <h2>Welcome back</h2>
+          <p>Sign in to your property dashboard</p>
+        </div>
+
+        <!-- Error message (hidden by default) -->
+        <div class="alert alert-error" id="error-alert" role="alert" aria-live="polite">
+          <span class="alert-icon">&#9888;</span>
+          <span id="error-msg">Invalid credentials. Please try again.</span>
+        </div>
+
+        <!-- Success message (hidden by default) -->
+        <div class="alert alert-success" id="success-alert" role="alert" aria-live="polite">
+          <span class="alert-icon">&#10003;</span>
+          <span id="success-msg">Login successful! Redirecting...</span>
+        </div>
+
+        <form id="login-form" novalidate>
+
+          <div class="field-group">
+            <label class="field-label" for="username">Username</label>
+            <div class="input-wrap">
+              <span class="input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </span>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                class="field-input"
+                placeholder="Enter your username"
+                autocomplete="username"
+                required
+              />
+            </div>
+            <span class="field-error" id="username-error"></span>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="password">Password</label>
+            <div class="input-wrap">
+              <span class="input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </span>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="field-input"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              />
+              <button type="button" class="toggle-pass" id="toggle-pass" aria-label="Toggle password visibility">
+                <svg class="eye-show" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <svg class="eye-hide" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>
+              </button>
+            </div>
+            <span class="field-error" id="password-error"></span>
+          </div>
+
+          <div class="field-row">
+            <label class="field-group">
+              <label class="field-label" for="role">Role</label>
+              <div class="input-wrap select-wrap">
+                <span class="input-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </span>
+                <select id="role" name="role" class="field-input field-select">
+                  <option value="ADMIN">Admin (Owner)</option>
+                  <option value="MANAGER">Manager</option>
+                  <option value="STAFF">Staff</option>
+                </select>
+              </div>
+            </label>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" id="remember-me" name="rememberMe" />
+              <span class="checkbox-custom"></span>
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn-login" id="login-btn">
+            <span class="btn-text">Sign In</span>
+            <span class="btn-spinner" id="btn-spinner" aria-hidden="true"></span>
+          </button>
+
+        </form>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NestManager — Rooms &amp; Beds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="rooms.css" />
+</head>
+<body>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <div class="sidebar-logo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <span class="logo-text">Nest<em>Manager</em></span>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <span class="nav-section-label">Main</span>
+        <a href="../dashboard/dashboard.html" class="nav-item" data-page="dashboard">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+          <span class="nav-label">Dashboard</span>
+        </a>
+        <a href="rooms.html" class="nav-item active" data-page="rooms">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+          <span class="nav-label">Rooms &amp; Beds</span>
+        </a>
+        <a href="../tenants/tenants.html" class="nav-item" data-page="tenants">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <span class="nav-label">Tenants</span>
+        </a>
+        <a href="../bookings/bookings.html" class="nav-item" data-page="bookings">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+          <span class="nav-label">Bookings</span>
+        </a>
+        <span class="nav-section-label">Finance</span>
+        <a href="../payments/payments.html" class="nav-item" data-page="payments">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <span class="nav-label">Payments</span>
+        </a>
+        <a href="../reports/reports.html" class="nav-item" data-page="reports">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+          <span class="nav-label">Reports</span>
+        </a>
+        <span class="nav-section-label">System</span>
+        <a href="../notifications/notifications.html" class="nav-item">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>
+          <span class="nav-label">Notifications</span>
+        </a>
+        <a href="../settings/settings.html" class="nav-item">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
+          <span class="nav-label">Settings</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="sidebar-user" id="sidebar-user">
+      <div class="user-avatar" id="user-avatar">--</div>
+      <div class="user-info">
+        <span class="user-name" id="user-name">Loading...</span>
+        <span class="user-role" id="user-role">--</span>
+      </div>
+      <button class="logout-btn" id="logout-btn" title="Sign out" aria-label="Sign out">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ===================== MAIN ===================== -->
+  <div class="main-wrap">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle sidebar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-title">Rooms &amp; Beds</div>
+      <div class="topbar-right">
+        <div class="topbar-date" id="topbar-date"></div>
+        <button class="topbar-icon-btn" id="refresh-btn" title="Refresh" aria-label="Refresh rooms">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+
+      <!-- Page header -->
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Rooms &amp; Beds</h1>
+          <p class="page-sub" id="page-sub">Manage all rooms and bed allocations</p>
+        </div>
+        <button class="btn btn-primary" id="add-room-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Add Room
+        </button>
+      </div>
+
+      <!-- Summary strip -->
+      <div class="summary-strip" id="summary-strip">
+        <div class="summary-item">
+          <span class="summary-value" id="sum-total">--</span>
+          <span class="summary-label">Total Rooms</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-item">
+          <span class="summary-value summary-value--green" id="sum-vacant">--</span>
+          <span class="summary-label">Vacant</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-item">
+          <span class="summary-value summary-value--red" id="sum-occupied">--</span>
+          <span class="summary-label">Occupied</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-item">
+          <span class="summary-value summary-value--yellow" id="sum-maintenance">--</span>
+          <span class="summary-label">Maintenance</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-item">
+          <span class="summary-value summary-value--purple" id="sum-occ-rate">--%</span>
+          <span class="summary-label">Occupancy Rate</span>
+        </div>
+      </div>
+
+      <!-- Filter + view toggle bar -->
+      <div class="toolbar">
+        <div class="filters" id="filters">
+          <button class="filter-btn active" data-filter="ALL">All</button>
+          <button class="filter-btn" data-filter="VACANT">Vacant</button>
+          <button class="filter-btn" data-filter="OCCUPIED">Occupied</button>
+          <button class="filter-btn" data-filter="MAINTENANCE">Maintenance</button>
+        </div>
+
+        <div class="toolbar-right">
+          <!-- Type filter -->
+          <select class="filter-select" id="type-filter" aria-label="Filter by room type">
+            <option value="ALL">All Types</option>
+            <option value="SINGLE">Single</option>
+            <option value="DOUBLE">Double</option>
+            <option value="SHARED">Shared</option>
+            <option value="SUITE">Suite</option>
+          </select>
+
+          <!-- Search -->
+          <div class="search-wrap">
+            <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="search-input" class="search-input" placeholder="Search room number..." aria-label="Search rooms" />
+          </div>
+
+          <!-- View toggle -->
+          <div class="view-toggle" role="group" aria-label="View toggle">
+            <button class="view-btn active" id="view-grid" title="Grid view" aria-pressed="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </button>
+            <button class="view-btn" id="view-list" title="List view" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rooms grid -->
+      <div class="rooms-grid" id="rooms-grid">
+        <!-- populated by JS -->
+      </div>
+
+      <!-- Rooms table (list view) -->
+      <div class="rooms-table-wrap hidden" id="rooms-table-wrap">
+        <table class="rooms-table">
+          <thead>
+            <tr>
+              <th>Room No.</th>
+              <th>Floor</th>
+              <th>Type</th>
+              <th>Capacity</th>
+              <th>Occupied</th>
+              <th>Price / Month</th>
+              <th>Amenities</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="rooms-tbody"></tbody>
+        </table>
+      </div>
+
+      <!-- Empty state -->
+      <div class="empty-state hidden" id="empty-state">
+        <div class="empty-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 class="empty-title" id="empty-title">No rooms found</h3>
+        <p class="empty-sub" id="empty-sub">Try adjusting your filters or add a new room.</p>
+        <button class="btn btn-primary" id="empty-add-btn">Add First Room</button>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ===================== ADD / EDIT ROOM MODAL ===================== -->
+  <div class="modal-overlay" id="room-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-title">Add New Room</h2>
+        <button class="modal-close" id="modal-close" aria-label="Close modal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form id="room-form" novalidate>
+
+          <!-- Hidden field for edit mode -->
+          <input type="hidden" id="room-id" />
+
+          <div class="form-grid">
+            <div class="field-group">
+              <label class="field-label" for="f-number">Room Number <span class="required">*</span></label>
+              <input type="text" id="f-number" class="field-input" placeholder="e.g. 101" required />
+              <span class="field-error" id="err-number"></span>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="f-floor">Floor <span class="required">*</span></label>
+              <input type="text" id="f-floor" class="field-input" placeholder="e.g. Ground, 1st, 2nd" required />
+              <span class="field-error" id="err-floor"></span>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="f-type">Room Type <span class="required">*</span></label>
+              <select id="f-type" class="field-input field-select">
+                <option value="SINGLE">Single</option>
+                <option value="DOUBLE">Double</option>
+                <option value="SHARED">Shared / Dormitory</option>
+                <option value="SUITE">Suite</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="f-capacity">Total Beds <span class="required">*</span></label>
+              <input type="number" id="f-capacity" class="field-input" placeholder="e.g. 2" min="1" max="20" required />
+              <span class="field-error" id="err-capacity"></span>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="f-price">Rent / Month (₹) <span class="required">*</span></label>
+              <input type="number" id="f-price" class="field-input" placeholder="e.g. 6000" min="0" required />
+              <span class="field-error" id="err-price"></span>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="f-status">Status <span class="required">*</span></label>
+              <select id="f-status" class="field-input field-select">
+                <option value="VACANT">Vacant</option>
+                <option value="OCCUPIED">Occupied</option>
+                <option value="MAINTENANCE">Maintenance</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group" style="margin-top:4px;">
+            <label class="field-label" for="f-amenities">Amenities</label>
+            <input type="text" id="f-amenities" class="field-input" placeholder="e.g. AC, WiFi, Attached Bath, Balcony" />
+            <span class="field-hint">Comma-separated list</span>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="f-notes">Notes</label>
+            <textarea id="f-notes" class="field-textarea" placeholder="Any additional notes about the room..."></textarea>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="modal-cancel">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="modal-submit">
+              <span id="submit-text">Add Room</span>
+              <span class="btn-spinner" id="submit-spinner"></span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== DELETE CONFIRM MODAL ===================== -->
+  <div class="modal-overlay" id="delete-modal" role="dialog" aria-modal="true" aria-labelledby="delete-title">
+    <div class="modal modal--sm">
+      <div class="modal-header">
+        <h2 class="modal-title" id="delete-title">Delete Room</h2>
+        <button class="modal-close" id="delete-modal-close" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="delete-msg">Are you sure you want to delete <strong id="delete-room-label">Room --</strong>? This action cannot be undone.</p>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="delete-cancel">Cancel</button>
+          <button type="button" class="btn btn-danger" id="delete-confirm">
+            <span id="delete-text">Delete Room</span>
+            <span class="btn-spinner" id="delete-spinner"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== TOAST ===================== -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <script src="rooms.js"></script>
+</body>
+</html>

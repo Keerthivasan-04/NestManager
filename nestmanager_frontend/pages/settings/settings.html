@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NestManager — Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <div class="sidebar-logo">
+        <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <span class="logo-text">Nest<em>Manager</em></span>
+      </div>
+      <nav class="sidebar-nav">
+        <span class="nav-section-label">Main</span>
+        <a href="../dashboard/dashboard.html" class="nav-item"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span><span class="nav-label">Dashboard</span></a>
+        <a href="../rooms/rooms.html" class="nav-item"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><span class="nav-label">Rooms &amp; Beds</span></a>
+        <a href="../tenants/tenants.html" class="nav-item"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="nav-label">Tenants</span></a>
+        <a href="../bookings/bookings.html" class="nav-item"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span class="nav-label">Bookings</span></a>
+        <span class="nav-section-label">Finance</span>
+        <a href="../payments/payments.html" class="nav-item"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span class="nav-label">Payments</span></a>
+        <a href="../reports/reports.html" class="nav-item"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span class="nav-label">Reports</span></a>
+        <span class="nav-section-label">System</span>
+        <a href="../notifications/notifications.html" class="nav-item"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span><span class="nav-label">Notifications</span></a>
+        <a href="settings.html" class="nav-item active"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span><span class="nav-label">Settings</span></a>
+      </nav>
+    </div>
+    <div class="sidebar-user">
+      <div class="user-avatar" id="user-avatar">--</div>
+      <div class="user-info"><span class="user-name" id="user-name">Loading...</span><span class="user-role" id="user-role">--</span></div>
+      <button class="logout-btn" id="logout-btn" title="Sign out"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></button>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ===================== MAIN ===================== -->
+  <div class="main-wrap">
+    <header class="topbar">
+      <button class="menu-toggle" id="menu-toggle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <div class="topbar-title">Settings</div>
+      <div class="topbar-right">
+        <div class="topbar-date" id="topbar-date"></div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Settings</h1>
+          <p class="page-sub">Configure your property and account preferences</p>
+        </div>
+      </div>
+
+      <div class="settings-layout">
+
+        <!-- Left: nav tabs -->
+        <aside class="settings-nav">
+          <button class="stab active" data-tab="property">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Property Info
+          </button>
+          <button class="stab" data-tab="account">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Account
+          </button>
+          <button class="stab" data-tab="notifications-pref">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            Notifications
+          </button>
+          <button class="stab" data-tab="billing">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            Billing Rules
+          </button>
+          <button class="stab" data-tab="security">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Security
+          </button>
+        </aside>
+
+        <!-- Right: tab content -->
+        <div class="settings-content">
+
+          <!-- Property Info -->
+          <section class="settings-section active" id="tab-property">
+            <div class="section-header">
+              <h2 class="section-title">Property Information</h2>
+              <p class="section-sub">Basic details about your property shown on receipts and reports</p>
+            </div>
+            <div class="form-grid">
+              <div class="field-group span-2">
+                <label class="field-label" for="prop-name">Property Name <span class="required">*</span></label>
+                <input type="text" id="prop-name" class="field-input" value="Sunrise PG &amp; Hostel" />
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="prop-owner">Owner Name <span class="required">*</span></label>
+                <input type="text" id="prop-owner" class="field-input" value="Rajesh Kumar" />
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="prop-phone">Contact Phone <span class="required">*</span></label>
+                <input type="tel" id="prop-phone" class="field-input" value="+91 98765 43210" />
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="prop-email">Contact Email</label>
+                <input type="email" id="prop-email" class="field-input" value="admin@sunrisepg.com" />
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="prop-gstin">GSTIN</label>
+                <input type="text" id="prop-gstin" class="field-input" placeholder="e.g. 33ABCDE1234F1Z5" />
+              </div>
+              <div class="field-group span-2">
+                <label class="field-label" for="prop-address">Property Address <span class="required">*</span></label>
+                <textarea id="prop-address" class="field-textarea">42, Gandhi Nagar, Tirunelveli, Tamil Nadu - 627001</textarea>
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="prop-city">City</label>
+                <input type="text" id="prop-city" class="field-input" value="Tirunelveli" />
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="prop-pincode">Pincode</label>
+                <input type="text" id="prop-pincode" class="field-input" value="627001" />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" onclick="saveSection('property')">Save Property Info</button>
+            </div>
+          </section>
+
+          <!-- Account -->
+          <section class="settings-section" id="tab-account">
+            <div class="section-header">
+              <h2 class="section-title">Account Settings</h2>
+              <p class="section-sub">Manage your login credentials and profile</p>
+            </div>
+            <div class="form-grid">
+              <div class="field-group">
+                <label class="field-label" for="acc-username">Username</label>
+                <input type="text" id="acc-username" class="field-input" value="admin" />
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="acc-role">Role</label>
+                <input type="text" id="acc-role" class="field-input" value="Admin (Owner)" readonly style="opacity:.6;cursor:default;" />
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="section-header">
+              <h2 class="section-title">Change Password</h2>
+              <p class="section-sub">Use a strong password of at least 8 characters</p>
+            </div>
+            <div class="form-grid">
+              <div class="field-group">
+                <label class="field-label" for="acc-cur-pass">Current Password</label>
+                <input type="password" id="acc-cur-pass" class="field-input" placeholder="••••••••" />
+              </div>
+              <div class="field-group"></div>
+              <div class="field-group">
+                <label class="field-label" for="acc-new-pass">New Password</label>
+                <input type="password" id="acc-new-pass" class="field-input" placeholder="••••••••" />
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="acc-confirm-pass">Confirm New Password</label>
+                <input type="password" id="acc-confirm-pass" class="field-input" placeholder="••••••••" />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" onclick="changePassword()">Update Password</button>
+            </div>
+          </section>
+
+          <!-- Notifications Preferences -->
+          <section class="settings-section" id="tab-notifications-pref">
+            <div class="section-header">
+              <h2 class="section-title">Notification Preferences</h2>
+              <p class="section-sub">Choose which alerts you want to receive</p>
+            </div>
+
+            <div class="toggle-list">
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <div class="toggle-label">Rent Due Reminders</div>
+                  <div class="toggle-desc">Get notified before and on rent due dates</div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="notif-rent" checked />
+                  <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                </label>
+              </div>
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <div class="toggle-label">Overdue Payment Alerts</div>
+                  <div class="toggle-desc">Alert when payments pass their due date</div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="notif-overdue" checked />
+                  <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                </label>
+              </div>
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <div class="toggle-label">Check-out Alerts</div>
+                  <div class="toggle-desc">Notify 3 days before a tenant's expected check-out</div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="notif-checkout" checked />
+                  <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                </label>
+              </div>
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <div class="toggle-label">New Booking Notifications</div>
+                  <div class="toggle-desc">Alert when a new booking is created or pending</div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="notif-booking" checked />
+                  <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                </label>
+              </div>
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <div class="toggle-label">New Tenant Alerts</div>
+                  <div class="toggle-desc">Notify when a tenant is added or checked in</div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="notif-tenant" checked />
+                  <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                </label>
+              </div>
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <div class="toggle-label">WhatsApp Integration <span class="badge-premium">Premium</span></div>
+                  <div class="toggle-desc">Send rent reminders via WhatsApp to tenants</div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="notif-whatsapp" disabled />
+                  <span class="toggle-track toggle-track--disabled"><span class="toggle-thumb"></span></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="section-header">
+              <h2 class="section-title">Reminder Schedule</h2>
+              <p class="section-sub">When to send rent due reminders</p>
+            </div>
+            <div class="form-grid">
+              <div class="field-group">
+                <label class="field-label" for="rem-days-before">Days Before Due Date</label>
+                <input type="number" id="rem-days-before" class="field-input" value="3" min="1" max="14" />
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="rem-due-day">Rent Due Day of Month</label>
+                <input type="number" id="rem-due-day" class="field-input" value="5" min="1" max="28" />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" onclick="saveSection('notifications-pref')">Save Preferences</button>
+            </div>
+          </section>
+
+          <!-- Billing Rules -->
+          <section class="settings-section" id="tab-billing">
+            <div class="section-header">
+              <h2 class="section-title">Billing Rules</h2>
+              <p class="section-sub">Configure late fees, advance deposit and receipt settings</p>
+            </div>
+            <div class="form-grid">
+              <div class="field-group">
+                <label class="field-label" for="bill-late-fee">Late Fee per Day (₹)</label>
+                <input type="number" id="bill-late-fee" class="field-input" value="50" min="0" />
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="bill-grace-days">Grace Period (Days)</label>
+                <input type="number" id="bill-grace-days" class="field-input" value="5" min="0" max="30" />
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="bill-deposit-months">Security Deposit (Months)</label>
+                <input type="number" id="bill-deposit-months" class="field-input" value="2" min="0" max="6" />
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="bill-currency">Currency</label>
+                <select id="bill-currency" class="field-input field-select">
+                  <option value="INR" selected>INR (₹)</option>
+                  <option value="USD">USD ($)</option>
+                  <option value="EUR">EUR (€)</option>
+                </select>
+              </div>
+              <div class="field-group span-2">
+                <label class="field-label" for="bill-receipt-footer">Receipt Footer Note</label>
+                <textarea id="bill-receipt-footer" class="field-textarea">Thank you for your payment. Please keep this receipt for your records.</textarea>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="section-header">
+              <h2 class="section-title">Accepted Payment Methods</h2>
+            </div>
+            <div class="toggle-list">
+              <div class="toggle-item">
+                <div class="toggle-info"><div class="toggle-label">UPI</div></div>
+                <label class="toggle-switch"><input type="checkbox" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+              <div class="toggle-item">
+                <div class="toggle-info"><div class="toggle-label">Cash</div></div>
+                <label class="toggle-switch"><input type="checkbox" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+              <div class="toggle-item">
+                <div class="toggle-info"><div class="toggle-label">Bank Transfer / NEFT</div></div>
+                <label class="toggle-switch"><input type="checkbox" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+              <div class="toggle-item">
+                <div class="toggle-info"><div class="toggle-label">Cheque</div></div>
+                <label class="toggle-switch"><input type="checkbox" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" onclick="saveSection('billing')">Save Billing Rules</button>
+            </div>
+          </section>
+
+          <!-- Security -->
+          <section class="settings-section" id="tab-security">
+            <div class="section-header">
+              <h2 class="section-title">Security Settings</h2>
+              <p class="section-sub">Manage session and access control settings</p>
+            </div>
+            <div class="toggle-list">
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <div class="toggle-label">Auto Logout on Inactivity</div>
+                  <div class="toggle-desc">Automatically log out after 30 minutes of inactivity</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+              <div class="toggle-item">
+                <div class="toggle-info">
+                  <div class="toggle-label">Login Attempt Limit</div>
+                  <div class="toggle-desc">Lock account after 5 failed login attempts</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="section-header">
+              <h2 class="section-title">Session Timeout</h2>
+            </div>
+            <div class="form-grid">
+              <div class="field-group">
+                <label class="field-label" for="sec-timeout">Session Timeout (minutes)</label>
+                <select id="sec-timeout" class="field-input field-select">
+                  <option value="15">15 minutes</option>
+                  <option value="30" selected>30 minutes</option>
+                  <option value="60">1 hour</option>
+                  <option value="120">2 hours</option>
+                  <option value="0">Never</option>
+                </select>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="danger-zone">
+              <div class="danger-zone-header">
+                <h3 class="danger-title">Danger Zone</h3>
+                <p class="danger-sub">These actions are irreversible. Please be certain.</p>
+              </div>
+              <div class="danger-actions">
+                <div class="danger-item">
+                  <div>
+                    <div class="danger-item-label">Reset All Data</div>
+                    <div class="danger-item-desc">Permanently delete all rooms, tenants, bookings and payments</div>
+                  </div>
+                  <button class="btn btn-danger btn-sm" onclick="confirmDanger('reset')">Reset Data</button>
+                </div>
+                <div class="danger-item">
+                  <div>
+                    <div class="danger-item-label">Delete Account</div>
+                    <div class="danger-item-desc">Permanently delete this property account</div>
+                  </div>
+                  <button class="btn btn-danger btn-sm" onclick="confirmDanger('delete')">Delete Account</button>
+                </div>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" onclick="saveSection('security')">Save Security Settings</button>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+  <script src="settings.js"></script>
+</body>
+</html>
