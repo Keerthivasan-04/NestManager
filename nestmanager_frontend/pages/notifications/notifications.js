@@ -29,6 +29,9 @@ function authHeaders() {
 function clearSession() {
   ['nestmanager_token','nestmanager_role','nestmanager_username'].forEach(k=>{sessionStorage.removeItem(k);localStorage.removeItem(k);});
 }
+function guardAuth() {
+  if (!getToken()) window.location.href = LOGIN_PAGE;
+}
 function escapeHtml(str) {
   const d=document.createElement('div'); d.appendChild(document.createTextNode(String(str??''))); return d.innerHTML;
 }

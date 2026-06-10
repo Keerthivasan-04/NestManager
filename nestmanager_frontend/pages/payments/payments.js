@@ -56,6 +56,10 @@ function clearSession() {
   });
 }
 
+function guardAuth() {
+  if (!getToken()) window.location.href = LOGIN_PAGE;
+}
+
 /* ------------------------------------------------------------------ */
 /*  DOM References                                                      */
 /* ------------------------------------------------------------------ */
