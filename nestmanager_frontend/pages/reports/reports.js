@@ -672,7 +672,7 @@ function showToast(msg, type = 'info') {
   //   ],
   // };
 
-  renderAll(currentData);
+  //renderAll(currentData);
 
   fetchReport(yearSelect.value);  // uncomment when backend is ready
 })();

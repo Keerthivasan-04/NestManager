@@ -681,3 +681,52 @@ td .amount,
     font-variant-numeric: tabular-nums;
     letter-spacing: -0.02em;
 }
+
+
+/* ================================================================
+   Demo Access Details
+   ================================================================ */
+
+.demo-card {
+  margin-top: 8px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(59,130,246,0.08);
+  border: 1px solid rgba(59,130,246,0.2);
+}
+
+.demo-card h4 {
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  color: #60a5fa;
+}
+
+.demo-card p {
+  margin: 2px 0;
+  color: var(--text2);
+  font-size: 0.82rem;
+}
+
+
+.demo-btn {
+  width: 100%;
+  height: 46px;
+  margin-top: 12px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(59,130,246,0.15),
+    rgba(99,102,241,0.15)
+  );
+
+  border: 1px solid rgba(59,130,246,0.25);
+  border-radius: var(--radius-sm);
+
+  color: #93c5fd;
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}

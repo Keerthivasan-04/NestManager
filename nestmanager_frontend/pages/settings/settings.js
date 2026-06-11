@@ -58,6 +58,10 @@ document.querySelectorAll('.stab').forEach(btn=>{
   });
 });
 
+function guardAuth() {
+  if (!getToken()) window.location.href = LOGIN_PAGE;
+}
+
 /* ---- Save Sections ---- */
 
 /**

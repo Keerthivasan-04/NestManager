@@ -163,7 +163,7 @@ button { cursor:pointer; font-family:var(--font-body); }
 .finance-card--blue   .finance-card__icon { background:var(--accent-dim); color:var(--accent); }
 
 .finance-card__body { flex:1; }
-.finance-card__value { font-family:var(--font-head); font-size:1.6rem; font-weight:800; line-height:1.1; }
+.finance-card__value { font-family: "DM Mono", monospace !important;; font-size:1.6rem; font-weight:800; line-height:1.1; }
 .finance-card--green  .finance-card__value { color:var(--green); }
 .finance-card--yellow .finance-card__value { color:var(--yellow); }
 .finance-card--red    .finance-card__value { color:var(--red); }
