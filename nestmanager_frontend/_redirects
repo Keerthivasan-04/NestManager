@@ -1,0 +1,9 @@
+/login        /pages/login/login.html        200
+/dashboard    /pages/dashboard/dashboard.html    200
+/bookings     /pages/bookings/bookings.html     200
+/notifications /pages/notifications/notifications.html 200
+/payments     /pages/payments/payments.html     200
+/reports      /pages/reports/reports.html       200
+/rooms        /pages/rooms/rooms.html     200
+/settings        /pages/settings/settings.html     200
+/tenants        /pages/tenants/tenants.html     200
