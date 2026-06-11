@@ -13,8 +13,11 @@
 /* ------------------------------------------------------------------ */
 /*  Config                                                              */
 /* ------------------------------------------------------------------ */
+// Production
+const API_BASE_URL = 'https://nestmanager.onrender.com';
 
-const API_BASE_URL = 'http://localhost:8080';   // Change to production URL when deploying
+// Local testing
+//const API_BASE_URL = 'http://localhost:8080';   // Change to production URL when deploying
 const LOGIN_ENDPOINT = `${API_BASE_URL}/api/auth/login`;
 const DASHBOARD_URL  = '../dashboard/dashboard.html';
 

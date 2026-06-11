@@ -19,7 +19,11 @@
 /*  Config                                                              */
 /* ------------------------------------------------------------------ */
 
-const API_BASE   = 'http://localhost:8080';
+// Production
+const API_BASE = 'https://nestmanager.onrender.com';
+
+// Local testing
+//const API_BASE   = 'http://localhost:8080';
 const ENDPOINTS  = {
   summary  : `${API_BASE}/api/dashboard/summary`,
   activity : `${API_BASE}/api/dashboard/activity`,

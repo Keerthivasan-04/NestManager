@@ -29,7 +29,11 @@
 /*  Config                                                              */
 /* ------------------------------------------------------------------ */
 
-const API_BASE         = 'http://localhost:8080';
+// Production
+const API_BASE = 'https://nestmanager.onrender.com';
+
+// Local testing
+// const API_BASE = 'http://localhost:8080';
 const BOOKINGS_URL     = `${API_BASE}/api/bookings`;
 const VACANT_ROOMS_URL = `${API_BASE}/api/rooms?status=VACANT`;
 const LOGIN_PAGE       = '../login/login.html';

@@ -24,7 +24,11 @@
 /*  Config                                                              */
 /* ------------------------------------------------------------------ */
 
-const API_BASE   = 'http://localhost:8080';
+// Production
+const API_BASE = 'https://nestmanager.onrender.com';
+
+// Local testing
+//const API_BASE   = 'http://localhost:8080';
 const LOGIN_PAGE = '../login/login.html';
 
 function reportUrl(year) {

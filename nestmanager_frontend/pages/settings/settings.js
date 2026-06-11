@@ -16,8 +16,11 @@
  */
 
 'use strict';
+// Production
+const API_BASE = 'https://nestmanager.onrender.com';
 
-const API_BASE   = 'http://localhost:8080';
+// Local testing
+//const API_BASE   = 'http://localhost:8080';
 const LOGIN_PAGE = '../login/login.html';
 
 function getToken(){return sessionStorage.getItem('nestmanager_token')||localStorage.getItem('nestmanager_token')||null;}

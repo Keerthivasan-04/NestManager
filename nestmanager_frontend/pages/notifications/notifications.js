@@ -16,7 +16,11 @@
 
 'use strict';
 
-const API_BASE    = 'http://localhost:8080';
+// Production
+const API_BASE = 'https://nestmanager.onrender.com';
+
+// Local testing
+//const API_BASE    = 'http://localhost:8080';
 const NOTIF_URL   = `${API_BASE}/api/notifications`;
 const LOGIN_PAGE  = '../login/login.html';
 
