@@ -67,8 +67,8 @@ public class SecurityConfig {
                 "http://127.0.0.1:3000",
                 "http://localhost:3000",
                 "http://127.0.0.1:5502",
-                "nestmanager.netlify.app",
-                "https://nestmanager.netlify.app/pages/login/login.html"
+                "https://nestmanager.netlify.app"
+//                "https://nestmanager.netlify.app/pages/login/login.html"
         ));
 
         config.setAllowedMethods(List.of(
